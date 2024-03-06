@@ -33,7 +33,7 @@ function reactVirtualized(): PluginOption {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://leurisvg.github.io/pokedex/',
+  base: '/pokedex/',
   plugins: [
     react(),
     reactVirtualized(),

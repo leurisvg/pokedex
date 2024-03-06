@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+], { basename: "/pokedex/" });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
