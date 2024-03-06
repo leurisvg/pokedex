@@ -1,0 +1,137 @@
+@layer components {
+  .sparkle {
+    @apply z-40;
+    animation: intro 2s;
+
+    &.sparkle-2 {
+      animation: intro-2 2.5s;
+    }
+
+    .group {
+      transform: translate(42.5px,42.5px);
+
+      path {
+        transform: translate(-42.50px,-42.50px);
+      }
+
+      .large {
+        animation: large 1.5s infinite alternate-reverse;
+      }
+
+      .large-2 {
+        animation: large-2 1.5s infinite alternate-reverse;
+      }
+
+      .small {
+        animation: small 1.5s infinite alternate-reverse;
+      }
+    }
+  }
+
+  @keyframes large {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.1);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(360deg) scale(1.5);
+    }
+  }
+  @-moz-keyframes large {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.1);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(360deg) scale(1.5);
+    }
+  }
+  @keyframes large-2 {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) scale(0.1);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(405deg) scale(1.1);
+    }
+  }
+  @-moz-keyframes large-2 {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) scale(0.1);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(405deg) scale(1.1);
+    }
+  }
+  @keyframes small {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.1);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(-360deg) scale(1.5);
+    }
+  }
+  @-moz-keyframes small {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.1);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(-360deg) scale(1.5);
+    }
+  }
+
+  @keyframes intro {
+    0% {
+      transform: scale(0);
+    }
+
+    70% {
+      transform: scale(1.8);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes intro-2 {
+    0% {
+      transform: scale(0);
+    }
+
+    70% {
+      transform: scale(1.8);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}

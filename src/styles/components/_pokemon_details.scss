@@ -1,0 +1,43 @@
+@layer components {
+  .tabs-wrapper {
+    @apply flex gap-x-3 md:justify-between relative md:after:absolute md:after:-bottom-2 md:after:left-0 md:after:w-full md:after:h-[5px]
+    md:after:bg-secondary-lightGray md:after:rounded-full md:overflow-x-visible overflow-x-auto;
+
+    .selected-bar {
+      @apply absolute -bottom-2 left-0 h-[5px] bg-secondary-500 z-10 rounded-full;
+      transition: all 300ms ease-in-out;
+    }
+
+    .tab {
+      @apply text-nowrap;
+
+      &.inactive {
+        @apply text-secondary-500/50 cursor-pointer;
+      }
+
+      &.active {
+        @apply font-bold text-secondary-500 cursor-default;
+      }
+
+      &:hover {
+        @apply text-secondary-500 transition;
+      }
+    }
+  }
+
+  .switch {
+    @apply relative w-[266px] h-[45px] bg-secondary-lightGray flex justify-between items-center rounded-full p-2.5 cursor-pointer;
+  }
+
+  .handle {
+    @apply absolute top-0 bottom-0 my-auto mx-0 w-[125px] h-[30px] bg-secondary-500 rounded-[40px];
+  }
+
+  .moves-table {
+    @apply w-full table-auto border border-collapse text-center font-montserrat text-secondary-500;
+
+    th, td {
+      @apply border border-collapse border-secondary-500/30;
+    }
+  }
+}

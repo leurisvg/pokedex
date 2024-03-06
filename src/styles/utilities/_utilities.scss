@@ -1,0 +1,39 @@
+@layer components {
+  .gradient {
+    background-image: radial-gradient(
+                    circle farthest-side at var(--x) var(--y),
+                    transparent 1%,
+                    #F8F8FF 75%
+    );
+  }
+
+  .custom-shadow {
+    box-shadow: 0px 0px 50px 5px rgb(78 78 78 / 30%);
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px;
+
+    &-track {
+      background: transparent;
+      height: 600px;
+    }
+
+    &-thumb {
+      background: #5E6273;
+      -webkit-border-radius: 5px;
+      border-radius: 8px;
+      border: 4px solid transparent;
+      background-clip: padding-box;
+      height: 50px;
+
+      &:hover {
+        background: #191F38;
+        -webkit-border-radius: 5px;
+        border-radius: 8px;
+        border: 4px solid transparent;
+        background-clip: padding-box;
+      }
+    }
+  }
+}

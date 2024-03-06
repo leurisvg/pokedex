@@ -1,0 +1,83 @@
+@layer components {
+  .pokemon-img-container {
+    @apply relative;
+
+    .pokemon-img {
+      @apply max-h-[350px] w-full object-contain relative z-40 animate-intro pointer-events-none;
+      transition: all 250ms;
+    }
+
+    .miniature-img-container {
+      @apply absolute right-16 bottom-7;
+
+      .miniature-shiny-img-container {
+        @apply relative;
+
+        img {
+          @apply cursor-pointer;
+          opacity: 0;
+          transition: all 250ms;
+
+          &:hover {
+            transform: translateX(60px) scale(1.2);
+          }
+        }
+
+        .sparkles-container {
+          @apply absolute -right-5 bottom-7 pointer-events-none hidden;
+          opacity: 0;
+          transition: all 250ms;
+
+          .sparkle-1-container {
+            @apply relative;
+
+            .sparkle-1 {
+              @apply absolute -bottom-5 right-0;
+            }
+          }
+
+          .sparkle-2-container {
+            @apply relative;
+
+            .sparkle-2 {
+              @apply absolute bottom-0 left-0;
+            }
+          }
+        }
+      }
+    }
+
+    .pokemon-shadow {
+      @apply absolute bottom-5 left-0 right-0 my-0 mx-auto h-[40px] bg-[#3c3c3c] rounded-[50%];
+      transform: scaleX(8.5);
+      box-shadow: 0px 0px 4px 3px rgb(0, 0, 0);
+      opacity: 0.4;
+      filter: blur(4px);
+      transition: all 250ms;
+    }
+
+    &:hover {
+      .pokemon-img {
+        transform: translateX(-30px);
+      }
+
+      .pokemon-shadow {
+        transform: translateX(-50px) scaleX(8.5);
+      }
+
+      .miniature-img-container {
+        img {
+          transform: translateX(60px);
+          opacity: 1;
+          transition: all 250ms;
+        }
+
+        .sparkles-container {
+          @apply block;
+          opacity: 1;
+          transition: all 250ms;
+        }
+      }
+    }
+  }
+}

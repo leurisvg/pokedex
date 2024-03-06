@@ -1,0 +1,14 @@
+@import "fonts.scss";
+@import "../styles/base/base.scss";
+@import "../styles/components/components.scss";
+@import "../styles/components/loading.scss";
+@import "../styles/components/sparkle.scss";
+@import "../styles/components/pokemon_list.scss";
+@import "../styles/components/pokemon_description.scss";
+@import "../styles/components/pokemon_details.scss";
+@import "../styles/utilities/utilities.scss";
+@import "../styles/utilities/animations.scss";
+@import "styles.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

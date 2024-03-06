@@ -1,0 +1,17 @@
+@layer base {
+  h2 {
+    @apply font-montserrat capitalize text-xl xl:text-3xl text-secondary-500 font-medium animate-fade;
+  }
+
+  h4 {
+    @apply font-montserrat capitalize text-lg lg:text-xl text-secondary-500 font-medium animate-fade;
+  }
+
+  h5 {
+    @apply font-montserrat capitalize text-base lg:text-lg text-secondary-500 font-medium animate-fade;
+  }
+
+  p {
+    @apply font-montserrat text-secondary-500 text-base font-medium animate-fade;
+  }
+}

@@ -1,0 +1,48 @@
+@layer components {
+  .pokemon-list-container {
+    @apply w-[360px] xl:w-[450px] h-screen 3xl:rounded-l-6xl rounded-r-6xl backdrop-blur-md custom-shadow bg-primary-500/70 overflow-hidden xl:static absolute z-50;
+
+    &.hide {
+      @apply -left-[450px];
+    }
+
+    .pokemon-list {
+      @apply h-full;
+      clip-path: xywh(0 0px 100% 100% round 0% 48px 48px 0);
+
+      .search-container {
+        @apply absolute top-0 left-0 w-full backdrop-blur;
+
+        .search {
+          @apply pl-3 pr-6 pb-6 pt-6 w-full z-20;
+
+          .input-container {
+            @apply relative;
+
+            .input {
+              @apply w-full rounded-full p-3 focus:outline-none bg-primary-400 border border-secondary-500 text-secondary-500 font-montserrat
+              placeholder:font-montserrat placeholder:text-secondary-400 px-9;
+            }
+
+            .search-icon {
+              @apply absolute top-0 bottom-0 left-2 my-auto h-fit cursor-text;
+            }
+
+            .clear-icon {
+              @apply absolute top-0 bottom-0 right-2 my-auto h-fit hover:cursor-pointer;
+            }
+          }
+        }
+      }
+    }
+
+    ::-webkit-scrollbar-button:start {
+      display: block;
+      height: 57px;
+    }
+  }
+
+  .card-background {
+    @apply bg-primary-400;
+  }
+}

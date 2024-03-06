@@ -1,0 +1,36 @@
+@layer components {
+
+  .animate-intro {
+    animation: animate-intro 400ms;
+  }
+
+  .animate-fade {
+    animation: animate-fade 1000ms;
+  }
+
+  .animate-fade-1_5 {
+    animation: animate-fade 1500ms;
+  }
+
+  @keyframes animate-intro {
+    0% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+
+    100% {
+      opacity: 100;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes animate-fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 100;
+    }
+  }
+}
