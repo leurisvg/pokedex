@@ -17,7 +17,7 @@ export const BarsChart = ({ stats }: IStatsProps) => {
         <div className="md:w-full lg:w-5/12">
           <div className="pb-2 lg:pb-4">
             <h2 className="font-bold">Base Stats</h2>
-            <p>Total ({ base.hp + base.spAttack + base.attack + base.spDefense + base.defense + base.speed })</p>
+            <p>Total ({ Object.values(base).reduce((acc, curr) => acc + curr, 0) })</p>
           </div>
           
           <div className="flex flex-col gap-y-2">

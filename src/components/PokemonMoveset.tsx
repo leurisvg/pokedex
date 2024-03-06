@@ -82,7 +82,7 @@ export const PokemonMoveset = ({ moveDetails, setMovesDetails }: Props) => {
             >
               <img
                 className="object-contain h-[70px] cursor-pointer hover:scale-110 transition"
-                src={ `../../games-logos/${ name }.png` }
+                src={ `../../pokedex/games-logos/${ name }.png` }
                 alt={ name }
                 onClick={ () => getMovesByGame(name) }
               />

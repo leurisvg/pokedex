@@ -67,7 +67,7 @@ export const Table = ({ moves }: Props) => {
             
             <img
               className="mx-auto"
-              src={ `../../move-category/${ details.damage_class.name }.gif` }
+              src={ `../../pokedex/move-category/${ details.damage_class.name }.gif` }
               alt={ details.damage_class.name }
             />
           
@@ -84,7 +84,7 @@ export const Table = ({ moves }: Props) => {
                 { generation.map(g => (
                   <img
                     key={ g }
-                    src={ `../../generations/${ g }.png` }
+                    src={ `../../pokedex/generations/${ g }.png` }
                     alt={ g }
                   />
                 )) }
@@ -92,7 +92,7 @@ export const Table = ({ moves }: Props) => {
               :
               <img
                 className="mx-auto"
-                src={ `../../generations/${ details.generation.name }.png` }
+                src={ `../../pokedex/generations/${ details.generation.name }.png` }
                 alt={ details.generation.name }
               /> }
           

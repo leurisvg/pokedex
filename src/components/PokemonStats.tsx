@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const PokemonStats = ({ isShedinja }: Props) => {
-  const [showRadialChart, setShowRadialChart] = useState(false);
+  const [showRadialChart, setShowRadialChart] = useState<boolean>(false);
   const { pokemon } = usePokemon();
   const [stats, setStats] = useState<IPokemonStats | null>(null);
   const { details } = pokemon!;
@@ -47,11 +47,10 @@ export const PokemonStats = ({ isShedinja }: Props) => {
   
   const setStatsHandler = (statType: 'base' | 'min' | 'max', obj: IStats) => {
     setStats(prev => {
-      if (!prev) return {} as IPokemonStats;
       return {
-        ...prev,
+        ...prev ?? {},
         [statType]: {
-          ...prev![statType],
+          ...prev?.[statType],
           ...obj,
         },
       } as IPokemonStats;
@@ -153,9 +152,10 @@ export const PokemonStats = ({ isShedinja }: Props) => {
                 transition={ { duration: 0.3 } }
                 custom={ showRadialChart }
               >
+                
                 { showRadialChart ?
-                  <RadarChart stats={ stats! }/> :
-                  <BarsChart stats={ stats! }/>
+                  <RadarChart stats={ stats }/> :
+                  <BarsChart stats={ stats }/>
                 }
               </motion.div>
             </AnimatePresence>
