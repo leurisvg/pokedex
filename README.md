@@ -4,7 +4,7 @@
 
 The Pokédex app is a web application built using TypeScript, React, Vite, and TailwindCSS. It allows users to search for Pokémon and view detailed information about each Pokémon, including their stats, evolution chain, resistances, weaknesses, and moves. The app fetches data from the [PokeAPI](https://pokeapi.co/) to provide information about Pokémon.
 
-Live: [https://leurisvg.github.io/pokedex]()
+Live: [leurisvg.github.io/pokedex](https://leurisvg.github.io/pokedex)
 
 ## Design by [Brett Simmons](https://dribbble.com/shots/14972001-001-Bulbasaur)
 
